@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="620.0" prefWidth="950.0" styleClass="background-app" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid234.jeae.IncidenciasController">
+
+<padding><Insets top="18" left="22" right="22" bottom="18"/></padding>
+
+<top>
+<VBox spacing="2">
+   <Label text="⚠️  Administración de Incidencias" styleClass="page-title">
+      <font><Font name="System Bold" size="22"/></font>
+   </Label>
+   <Label text="Revisa, filtra y da seguimiento a las incidencias reportadas" styleClass="page-subtitle"/>
+   <BorderPane.margin><Insets bottom="16"/></BorderPane.margin>
+</VBox>
+</top>
+
+<center>
+<VBox spacing="18">
+
+   <HBox spacing="12" alignment="CENTER_LEFT" styleClass="card">
+      <padding><Insets top="14" left="18" right="18" bottom="14"/></padding>
+      <Label text="Filtrar por estado:" styleClass="field-label"/>
+      <ComboBox fx:id="cmbFiltroEstado" prefWidth="180"/>
+   </HBox>
+
+   <VBox spacing="10" styleClass="card" VBox.vgrow="ALWAYS">
+      <padding><Insets top="14" left="14" right="14" bottom="14"/></padding>
+      <Label text="Incidencias reportadas por los alumnos en los laboratorios, con su tipo, descripción y estado de atención." wrapText="true" styleClass="helper-text"/>
+      <TableView fx:id="tablaIncidencias" prefHeight="280" VBox.vgrow="ALWAYS">
+         <columns>
+            <TableColumn fx:id="colId" text="ID" prefWidth="45"/>
+            <TableColumn fx:id="colMatricula" text="Matrícula" prefWidth="100"/>
+            <TableColumn fx:id="colNombreAlumno" text="Alumno" prefWidth="160"/>
+            <TableColumn fx:id="colLaboratorio" text="Laboratorio" prefWidth="120"/>
+            <TableColumn fx:id="colTipo" text="Tipo" prefWidth="130"/>
+            <TableColumn fx:id="colDescripcion" text="Descripción" prefWidth="220"/>
+            <TableColumn fx:id="colFecha" text="Fecha" prefWidth="100"/>
+            <TableColumn fx:id="colHora" text="Hora" prefWidth="80"/>
+            <TableColumn fx:id="colEstado" text="Estado" prefWidth="100"/>
+         </columns>
+      </TableView>
+   </VBox>
+
+   <VBox spacing="10" styleClass="card">
+      <padding><Insets top="16" left="18" right="18" bottom="16"/></padding>
+
+      <Label text="Observaciones del administrador" styleClass="field-label"/>
+      <TextArea fx:id="txtObservaciones" prefHeight="80" wrapText="true"/>
+
+      <HBox spacing="12">
+         <VBox.margin><Insets top="6"/></VBox.margin>
+         <Button fx:id="btnResuelta" onAction="#marcarResuelta" prefHeight="36" prefWidth="190" styleClass="btn, btn-secondary" text="Marcar como resuelta"/>
+         <Button fx:id="btnReabrir" onAction="#reabrir" prefHeight="36" prefWidth="150" styleClass="btn, btn-warning" text="Reabrir"/>
+         <Button fx:id="btnLimpiar" onAction="#limpiar" prefHeight="36" prefWidth="110" styleClass="btn, btn-neutral" text="Limpiar"/>
+      </HBox>
+   </VBox>
+
+</VBox>
+</center>
+
+</BorderPane>

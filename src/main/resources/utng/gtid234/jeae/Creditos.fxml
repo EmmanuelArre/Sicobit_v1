@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="700.0" prefWidth="1200.0" styleClass="background-app" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid234.jeae.CreditosController">
+
+<top>
+<VBox>
+<BorderPane prefHeight="100" styleClass="app-header">
+<left>
+<ImageView fitHeight="80" preserveRatio="true" BorderPane.alignment="CENTER">
+   <BorderPane.margin><Insets left="20"/></BorderPane.margin>
+   <image><Image url="@images/logoutng.png"/></image>
+</ImageView>
+</left>
+<center>
+<Label text="SICOBIT" styleClass="app-title">
+<font>
+<Font name="System Bold" size="26" />
+</font>
+</Label>
+</center>
+<right>
+<ImageView fitHeight="72" preserveRatio="true" BorderPane.alignment="CENTER">
+   <BorderPane.margin><Insets right="20"/></BorderPane.margin>
+   <image><Image url="@images/logo_extraclase_horizontal.png"/></image>
+</ImageView>
+</right>
+</BorderPane>
+<BorderPane prefHeight="8" styleClass="app-header-accent" />
+</VBox>
+</top>
+
+<center>
+<ScrollPane fitToWidth="true" styleClass="sidebar-scroll">
+<VBox alignment="TOP_CENTER" spacing="6">
+   <padding>
+      <Insets top="34" bottom="34" left="60" right="60"/>
+   </padding>
+
+   <Label text="Créditos" styleClass="page-title">
+      <font>
+         <Font name="System Bold" size="32"/>
+      </font>
+   </Label>
+
+   <Label text="Personas y equipo detrás del desarrollo de SICOBIT" styleClass="page-subtitle">
+      <font>
+         <Font size="14.5"/>
+      </font>
+   </Label>
+
+   <Label text="EQUIPO SICOBIT" styleClass="team-badge">
+      <VBox.margin>
+         <Insets top="18" bottom="26"/>
+      </VBox.margin>
+   </Label>
+
+   <VBox spacing="14" maxWidth="720">
+
+      <HBox alignment="CENTER_LEFT" spacing="16" styleClass="credit-card">
+         <VBox alignment="CENTER" prefHeight="46" prefWidth="46" styleClass="credit-avatar">
+            <Label text="JE" styleClass="credit-avatar-label"/>
+         </VBox>
+         <VBox spacing="3">
+            <Label text="José Emmanuel Arredondo Escalante" styleClass="credit-name"/>
+            <Label text="Desarrollador Full Stack" styleClass="credit-role"/>
+         </VBox>
+      </HBox>
+
+      <HBox alignment="CENTER_LEFT" spacing="16" styleClass="credit-card">
+         <VBox alignment="CENTER" prefHeight="46" prefWidth="46" styleClass="credit-avatar">
+            <Label text="HC" styleClass="credit-avatar-label"/>
+         </VBox>
+         <VBox spacing="3">
+            <Label text="Hector Nith-Haian Cerón Camacho" styleClass="credit-name"/>
+            <Label text="Desarrollador Full Stack" styleClass="credit-role"/>
+         </VBox>
+      </HBox>
+
+      <HBox alignment="CENTER_LEFT" spacing="16" styleClass="credit-card">
+         <VBox alignment="CENTER" prefHeight="46" prefWidth="46" styleClass="credit-avatar">
+            <Label text="DH" styleClass="credit-avatar-label"/>
+         </VBox>
+         <VBox spacing="3">
+            <Label text="Diego Hernández Bautista" styleClass="credit-name"/>
+            <Label text="Desarrollador Full Stack" styleClass="credit-role"/>
+         </VBox>
+      </HBox>
+
+      <HBox alignment="CENTER_LEFT" spacing="16" styleClass="credit-card">
+         <VBox alignment="CENTER" prefHeight="46" prefWidth="46" styleClass="credit-avatar">
+            <Label text="MM" styleClass="credit-avatar-label"/>
+         </VBox>
+         <VBox spacing="3">
+            <Label text="Marcos Mendez Morales" styleClass="credit-name"/>
+            <Label text="Desarrollador Full Stack" styleClass="credit-role"/>
+         </VBox>
+      </HBox>
+
+   </VBox>
+
+   <Label text="PROFESORES A CARGO DE REVISIÓN" styleClass="team-badge-blue">
+      <VBox.margin>
+         <Insets top="36" bottom="26"/>
+      </VBox.margin>
+   </Label>
+
+   <VBox spacing="14" maxWidth="720">
+
+      <HBox alignment="CENTER_LEFT" spacing="16" styleClass="credit-card">
+         <VBox alignment="CENTER" prefHeight="46" prefWidth="46" styleClass="credit-avatar-blue">
+            <Label text="MT" styleClass="credit-avatar-label"/>
+         </VBox>
+         <VBox spacing="3">
+            <Label text="María Teresa Díaz Robledo" styleClass="credit-name"/>
+            <Label text="Profesora de Programación Orientada a Objetos" styleClass="credit-role-blue"/>
+         </VBox>
+      </HBox>
+
+      <HBox alignment="CENTER_LEFT" spacing="16" styleClass="credit-card">
+         <VBox alignment="CENTER" prefHeight="46" prefWidth="46" styleClass="credit-avatar-blue">
+            <Label text="RM" styleClass="credit-avatar-label"/>
+         </VBox>
+         <VBox spacing="3">
+            <Label text="Ricardo Muro Gomez" styleClass="credit-name"/>
+            <Label text="Profesor de Base de Datos" styleClass="credit-role-blue"/>
+         </VBox>
+      </HBox>
+
+      <HBox alignment="CENTER_LEFT" spacing="16" styleClass="credit-card">
+         <VBox alignment="CENTER" prefHeight="46" prefWidth="46" styleClass="credit-avatar-blue">
+            <Label text="PV" styleClass="credit-avatar-label"/>
+         </VBox>
+         <VBox spacing="3">
+            <Label text="Pamela Villanueva Gaytan" styleClass="credit-name"/>
+            <Label text="Profesora de Integradora I" styleClass="credit-role-blue"/>
+         </VBox>
+      </HBox>
+
+   </VBox>
+
+   <Button fx:id="btnVolver" onAction="#volver" text="← Volver al inicio" styleClass="btn, btn-primary" prefWidth="200" prefHeight="42">
+      <VBox.margin>
+         <Insets top="34"/>
+      </VBox.margin>
+      <font>
+         <Font name="System Bold" size="14"/>
+      </font>
+   </Button>
+
+</VBox>
+</ScrollPane>
+</center>
+
+<bottom>
+<BorderPane prefHeight="40" styleClass="footer-bar">
+   <center>
+      <Label text="Universidad Tecnológica del Norte de Guanajuato" styleClass="footer-text">
+         <font><Font size="12"/></font>
+      </Label>
+   </center>
+</BorderPane>
+</bottom>
+
+</BorderPane>

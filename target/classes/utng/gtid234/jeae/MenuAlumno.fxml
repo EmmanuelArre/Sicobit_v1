@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="700.0" prefWidth="1200.0" styleClass="background-app" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid234.jeae.MenuAlumnoController">
+
+<top>
+<VBox>
+<BorderPane prefHeight="100" styleClass="app-header">
+<left>
+<ImageView fitHeight="80" preserveRatio="true" BorderPane.alignment="CENTER">
+   <BorderPane.margin><Insets left="20"/></BorderPane.margin>
+   <image><Image url="@images/logoutng.png"/></image>
+</ImageView>
+</left>
+<center>
+<Label text="SICOBIT - Alumno" styleClass="app-title">
+<font>
+<Font name="System Bold" size="26" />
+</font>
+</Label>
+</center>
+<right>
+<ImageView fitHeight="72" preserveRatio="true" BorderPane.alignment="CENTER">
+   <BorderPane.margin><Insets right="20"/></BorderPane.margin>
+   <image><Image url="@images/logo_extraclase_horizontal.png"/></image>
+</ImageView>
+</right>
+</BorderPane>
+<BorderPane prefHeight="8" styleClass="app-header-accent" />
+</VBox>
+</top>
+
+<center>
+<VBox alignment="CENTER" spacing="12">
+
+<Label text="¿Qué deseas hacer?" styleClass="page-title">
+   <font>
+      <Font name="System Bold" size="28"/>
+   </font>
+</Label>
+<Label text="Elige una opción para continuar" styleClass="page-subtitle"/>
+
+<HBox alignment="CENTER" spacing="32">
+   <VBox.margin>
+      <Insets top="34"/>
+   </VBox.margin>
+
+   <Button fx:id="btnRegistro" onAction="#irRegistro" prefHeight="170" prefWidth="230" styleClass="tile-btn, tile-blue" text="📝&#10;Registro de&#10;Alumno" wrapText="true" textAlignment="CENTER">
+      <font><Font name="System Bold" size="17"/></font>
+   </Button>
+
+   <Button fx:id="btnIncidencia" onAction="#irIncidencia" prefHeight="170" prefWidth="230" styleClass="tile-btn, tile-orange" text="⚠️&#10;Registro de&#10;Incidencias" wrapText="true" textAlignment="CENTER">
+      <font><Font name="System Bold" size="17"/></font>
+   </Button>
+
+</HBox>
+
+<Button fx:id="btnRegresar" onAction="#regresar" prefHeight="42" prefWidth="160" styleClass="btn, btn-warning" text="← Regresar">
+   <VBox.margin>
+      <Insets top="44"/>
+   </VBox.margin>
+</Button>
+
+</VBox>
+</center>
+
+</BorderPane>

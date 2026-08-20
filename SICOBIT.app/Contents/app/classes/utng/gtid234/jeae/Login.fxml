@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="700.0" prefWidth="1200.0" styleClass="background-app" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid234.jeae.LoginController">
+
+<top>
+<VBox>
+<BorderPane prefHeight="130" styleClass="app-header">
+<left>
+<ImageView fitHeight="90" preserveRatio="true" BorderPane.alignment="CENTER">
+   <BorderPane.margin><Insets left="20"/></BorderPane.margin>
+   <image><Image url="@images/logoutng.png"/></image>
+</ImageView>
+</left>
+<center>
+<VBox alignment="CENTER" spacing="4">
+<Label text="SICOBIT" styleClass="app-title">
+<font>
+<Font name="System Bold" size="32" />
+</font>
+</Label>
+<Label text="Sistema de Control de Laboratorios Extraclase" styleClass="app-subtitle">
+<font><Font size="14"/></font>
+</Label>
+</VBox>
+</center>
+<right>
+<ImageView fitHeight="110" preserveRatio="true" BorderPane.alignment="CENTER">
+   <BorderPane.margin><Insets right="20"/></BorderPane.margin>
+   <image><Image url="@images/logo_extraclase_horizontal.png"/></image>
+</ImageView>
+</right>
+</BorderPane>
+<BorderPane prefHeight="8" styleClass="app-header-accent" />
+</VBox>
+</top>
+
+<center>
+<VBox alignment="CENTER" spacing="18" maxWidth="420" styleClass="card">
+<padding><Insets top="36" bottom="36" left="44" right="44"/></padding>
+
+<Label text="Acceso Administrador" styleClass="page-title">
+   <font>
+      <Font name="System Bold" size="26"/>
+   </font>
+</Label>
+<Label text="Ingresa tus credenciales para continuar" styleClass="page-subtitle"/>
+
+<VBox spacing="6">
+   <Label text="Usuario" styleClass="field-label"/>
+   <TextField fx:id="txtUsuario" prefWidth="320" prefHeight="42" promptText="Usuario" style="-fx-font-size: 15px;"/>
+</VBox>
+
+<VBox spacing="6">
+   <Label text="Contraseña" styleClass="field-label"/>
+   <PasswordField fx:id="txtPassword" prefWidth="320" prefHeight="42" promptText="Contraseña" style="-fx-font-size: 15px;"/>
+</VBox>
+
+<HBox alignment="CENTER" spacing="16">
+   <VBox.margin>
+      <Insets top="14"/>
+   </VBox.margin>
+
+   <Button fx:id="btnIngresar" onAction="#ingresar" prefHeight="46" prefWidth="150" styleClass="btn, btn-primary" text="Ingresar" style="-fx-font-size: 14.5px;"/>
+   <Button fx:id="btnRegresar" onAction="#regresar" prefHeight="46" prefWidth="150" styleClass="btn, btn-warning" text="← Regresar" style="-fx-font-size: 14.5px;"/>
+
+</HBox>
+
+</VBox>
+</center>
+
+</BorderPane>

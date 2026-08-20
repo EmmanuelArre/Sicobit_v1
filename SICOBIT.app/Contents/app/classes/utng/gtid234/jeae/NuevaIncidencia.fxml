@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="700.0" prefWidth="1200.0" styleClass="background-app" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid234.jeae.NuevaIncidenciaController">
+
+<top>
+<VBox>
+<BorderPane prefHeight="100" styleClass="app-header">
+<left>
+<ImageView fitHeight="80" preserveRatio="true" BorderPane.alignment="CENTER">
+   <BorderPane.margin><Insets left="20"/></BorderPane.margin>
+   <image><Image url="@images/logoutng.png"/></image>
+</ImageView>
+</left>
+<center>
+<Label text="Registro de Incidencias" styleClass="app-title">
+<font><Font name="System Bold" size="24" /></font>
+</Label>
+</center>
+<right>
+<ImageView fitHeight="72" preserveRatio="true" BorderPane.alignment="CENTER">
+   <BorderPane.margin><Insets right="20"/></BorderPane.margin>
+   <image><Image url="@images/logo_extraclase_horizontal.png"/></image>
+</ImageView>
+</right>
+</BorderPane>
+<BorderPane prefHeight="8" styleClass="app-header-accent" />
+</VBox>
+</top>
+
+<center>
+<VBox alignment="TOP_CENTER" spacing="16">
+   <padding><Insets top="30" left="60" right="60"/></padding>
+
+   <VBox spacing="18" maxWidth="740" styleClass="card">
+      <padding><Insets top="28" left="34" right="34" bottom="28"/></padding>
+
+      <Label text="Detalles de la incidencia" styleClass="section-title">
+         <font><Font name="System Bold" size="16"/></font>
+      </Label>
+
+      <GridPane hgap="20" vgap="14">
+
+         <Label text="Matrícula" styleClass="field-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+         <TextField fx:id="txtMatricula" promptText="Matrícula del alumno" prefHeight="34" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+         <Label text="Nombre" styleClass="field-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+         <TextField fx:id="txtNombre" editable="false" styleClass="field-readonly" prefHeight="34" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+         <Label text="Laboratorio" styleClass="field-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+         <ComboBox fx:id="cmbLaboratorio" prefWidth="300" prefHeight="34" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+         <Label text="Equipo (opcional)" styleClass="field-label" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+         <ComboBox fx:id="cmbEquipo" prefWidth="300" prefHeight="34" promptText="Selecciona el laboratorio primero" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+         <Label text="Tipo de incidencia" styleClass="field-label" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+         <ComboBox fx:id="cmbTipo" prefWidth="300" prefHeight="34" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+         <Label text="Descripción" styleClass="field-label" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+         <TextArea fx:id="txtDescripcion" prefHeight="120" prefWidth="300" wrapText="true" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+      </GridPane>
+
+      <Label text="La fecha y la hora del registro las toma el sistema automáticamente." styleClass="helper-text" wrapText="true"/>
+
+      <HBox alignment="CENTER" spacing="16">
+         <VBox.margin><Insets top="14"/></VBox.margin>
+
+         <Button fx:id="btnGuardar" onAction="#guardar" prefHeight="45" prefWidth="150" styleClass="btn, btn-secondary" text="Guardar"/>
+         <Button fx:id="btnLimpiar" onAction="#limpiar" prefHeight="45" prefWidth="150" styleClass="btn, btn-neutral" text="Limpiar"/>
+         <Button fx:id="btnCancelar" onAction="#cancelar" prefHeight="45" prefWidth="150" styleClass="btn, btn-warning" text="← Regresar"/>
+
+      </HBox>
+   </VBox>
+
+</VBox>
+</center>
+
+</BorderPane>

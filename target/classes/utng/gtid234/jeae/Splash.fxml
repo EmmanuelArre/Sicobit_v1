@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: linear-gradient(to bottom right, #1A56E8, #123FAE);" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid234.jeae.SplashController">
+
+<center>
+<VBox alignment="CENTER" spacing="18">
+
+<Label text="SICOBIT" textFill="WHITE">
+   <font>
+      <Font name="System Bold" size="56"/>
+   </font>
+</Label>
+
+<Label text="Sistema de Control de Laboratorios Extraclase" textFill="WHITE">
+   <font>
+      <Font size="16"/>
+   </font>
+</Label>
+
+<Label fx:id="lblInstitucion" text="Universidad Tecnológica del Norte de Guanajuato" textFill="#D6E4FF">
+   <font>
+      <Font size="13"/>
+   </font>
+</Label>
+
+<ProgressBar fx:id="barCarga" prefWidth="340" prefHeight="10" progress="0" style="-fx-accent:#2EAA4A; -fx-background-radius:6;">
+   <VBox.margin>
+      <Insets top="34"/>
+   </VBox.margin>
+</ProgressBar>
+
+</VBox>
+</center>
+
+<bottom>
+<BorderPane prefHeight="8" styleClass="app-header-accent" />
+</bottom>
+
+</BorderPane>

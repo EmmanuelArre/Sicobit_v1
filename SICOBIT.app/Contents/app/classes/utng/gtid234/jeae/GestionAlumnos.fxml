@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="660.0" prefWidth="1100.0" styleClass="background-app" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid234.jeae.GestionAlumnosController">
+
+<padding><Insets top="18" left="22" right="22" bottom="18"/></padding>
+
+<top>
+<VBox spacing="2">
+   <Label text="🎓  Grupos y alumnos" styleClass="page-title">
+      <font><Font name="System Bold" size="22"/></font>
+   </Label>
+   <Label text="Administra los grupos y da de alta alumnos dentro de un grupo ya registrado" styleClass="page-subtitle"/>
+   <BorderPane.margin><Insets bottom="16"/></BorderPane.margin>
+</VBox>
+</top>
+
+<center>
+<HBox spacing="18">
+
+   <!-- ===================== PANEL IZQUIERDO: GRUPOS ===================== -->
+   <VBox spacing="14" styleClass="card" prefWidth="360" HBox.hgrow="NEVER">
+      <padding><Insets top="20" left="22" right="22" bottom="20"/></padding>
+
+      <Label text="Grupos" styleClass="section-title">
+         <font><Font name="System Bold" size="15"/></font>
+      </Label>
+      <Label text="Da de alta, renombra o elimina grupos. Selecciona uno para ver y administrar sus alumnos." wrapText="true" styleClass="helper-text"/>
+
+      <HBox spacing="10">
+         <TextField fx:id="txtNombreGrupo" promptText="Nombre del grupo" prefWidth="200" HBox.hgrow="ALWAYS"/>
+      </HBox>
+
+      <HBox spacing="10">
+         <Button fx:id="btnAgregarGrupo" onAction="#agregarGrupo" prefHeight="34" styleClass="btn, btn-secondary" text="Agregar"/>
+         <Button fx:id="btnEditarGrupo" onAction="#editarGrupo" prefHeight="34" styleClass="btn, btn-primary" text="Renombrar"/>
+         <Button fx:id="btnEliminarGrupo" onAction="#eliminarGrupo" prefHeight="34" styleClass="btn, btn-danger" text="Eliminar"/>
+      </HBox>
+
+      <ListView fx:id="listaGrupos" VBox.vgrow="ALWAYS" prefHeight="420"/>
+
+   </VBox>
+
+   <!-- ===================== PANEL DERECHO: ALUMNOS DEL GRUPO SELECCIONADO ===================== -->
+   <VBox spacing="14" styleClass="card" HBox.hgrow="ALWAYS">
+      <padding><Insets top="20" left="22" right="22" bottom="20"/></padding>
+
+      <Label fx:id="lblGrupoSeleccionado" text="Alumnos — selecciona un grupo a la izquierda" styleClass="section-title">
+         <font><Font name="System Bold" size="15"/></font>
+      </Label>
+
+      <GridPane hgap="18" vgap="12">
+
+         <Label text="Matrícula" styleClass="field-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+         <TextField fx:id="txtMatricula" promptText="0000000000" prefWidth="180" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+         <Label text="Nombre" styleClass="field-label" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+         <TextField fx:id="txtNombreAlumno" promptText="Nombre completo" prefWidth="260" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+
+         <Label text="Grupo" styleClass="field-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+         <ComboBox fx:id="cmbGrupoAlumno" prefWidth="180" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+      </GridPane>
+
+      <HBox spacing="12">
+         <Button fx:id="btnAgregarAlumno" onAction="#agregarAlumno" prefHeight="36" prefWidth="130" styleClass="btn, btn-secondary" text="Agregar"/>
+         <Button fx:id="btnEditarAlumno" onAction="#editarAlumno" prefHeight="36" prefWidth="150" styleClass="btn, btn-primary" text="Guardar cambios"/>
+         <Button fx:id="btnEliminarAlumno" onAction="#eliminarAlumno" prefHeight="36" prefWidth="110" styleClass="btn, btn-danger" text="Eliminar"/>
+         <Button fx:id="btnLimpiarAlumno" onAction="#limpiarAlumno" prefHeight="36" prefWidth="110" styleClass="btn, btn-neutral" text="Limpiar"/>
+         <Button fx:id="btnImportarExcel" onAction="#abrirImportarExcel" prefHeight="36" prefWidth="190" styleClass="btn, btn-warning" text="📥  Importar desde Excel"/>
+      </HBox>
+
+      <TableView fx:id="tablaAlumnos" VBox.vgrow="ALWAYS" prefHeight="360">
+         <columns>
+            <TableColumn fx:id="colMatricula" text="Matrícula" prefWidth="150"/>
+            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="260"/>
+            <TableColumn fx:id="colGrupo" text="Grupo" prefWidth="120"/>
+         </columns>
+      </TableView>
+
+   </VBox>
+
+</HBox>
+</center>
+
+</BorderPane>

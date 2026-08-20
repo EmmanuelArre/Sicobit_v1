@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="700.0" prefWidth="1200.0" styleClass="background-app" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="utng.gtid234.jeae.InicioController">
+
+<BorderPane styleClass="background-app">
+
+<top>
+<VBox>
+<BorderPane prefHeight="100" styleClass="app-header">
+<left>
+<ImageView fitHeight="80" preserveRatio="true" BorderPane.alignment="CENTER">
+   <BorderPane.margin><Insets left="20" /></BorderPane.margin>
+   <image><Image url="@images/logoutng.png" /></image>
+</ImageView>
+</left>
+<center>
+<Label styleClass="app-title" text="SICOBIT">
+<font>
+<Font name="System Bold" size="26" />
+</font>
+</Label>
+</center>
+<right>
+<ImageView fitHeight="72" preserveRatio="true" BorderPane.alignment="CENTER">
+   <BorderPane.margin><Insets right="20" /></BorderPane.margin>
+   <image><Image url="@images/logo_extraclase_horizontal.png" /></image>
+</ImageView>
+</right>
+</BorderPane>
+<BorderPane prefHeight="8" styleClass="app-header-accent" />
+</VBox>
+</top>
+
+<center>
+<VBox alignment="CENTER" spacing="12">
+
+<Label styleClass="page-title" text="Bienvenido">
+   <font>
+      <Font name="System Bold" size="32" />
+   </font>
+</Label>
+
+<Label styleClass="page-subtitle" text="Selecciona tu tipo de acceso">
+   <font>
+      <Font size="15" />
+   </font>
+</Label>
+
+<HBox alignment="CENTER" spacing="44">
+   <VBox.margin>
+      <Insets top="44" />
+   </VBox.margin>
+
+   <Button fx:id="btnAlumno" onAction="#irAlumno" prefHeight="190" prefWidth="270" styleClass="tile-btn, tile-blue" text="🎓&#10;Alumno" textAlignment="CENTER" wrapText="true">
+      <font>
+         <Font name="System Bold" size="26" />
+      </font>
+   </Button>
+
+   <Button fx:id="btnAdministrador" onAction="#irAdministrador" prefHeight="190" prefWidth="270" styleClass="tile-btn, tile-green" text="⚙️&#10;Administrador" textAlignment="CENTER" wrapText="true">
+      <font>
+         <Font name="System Bold" size="26" />
+      </font>
+   </Button>
+
+</HBox>
+
+</VBox>
+</center>
+
+<bottom>
+<BorderPane prefHeight="40" styleClass="footer-bar">
+   <center>
+      <Label alignment="CENTER" styleClass="footer-text" text="Universidad Tecnológica del Norte de Guanajuato">
+         <font><Font size="12" /></font>
+      </Label>
+   </center>
+            <right>
+            
+            <Button fx:id="btnCreditos" onAction="#irCreditos" prefHeight="44.0" prefWidth="160.0" styleClass="fab-purple" text=":) Créditos" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Button>
+            </right>
+</BorderPane>
+</bottom>
+
+</BorderPane>
+
+</StackPane>
